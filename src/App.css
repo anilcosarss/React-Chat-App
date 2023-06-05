@@ -1,38 +1,134 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
 .App {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app-header {
   text-align: center;
+  background-color: #3b5998;
+  color: white;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-container {
+  margin-top: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.room {
+  
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-top: 150px;
+}
+
+.room label {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.room input {
+  width: 200px;
+  height: 30px;
+  border: 2px solid #3b5998;
+  border-radius: 6px;
+  padding-left: 5px;
+  font-size: 20px;
+  text-align: center;
+  margin: 5px;
+}
+.room button {
+  width: 210px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  padding-left: 5px;
+  font-size: 20px;
+  text-align: center;
+  margin: 5px;
+  background-color: #3b5998;
   color: white;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.sign-out {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  
+}
+.sign-out button {
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 20px;
+  text-align: center;
+  margin: 5px;
+  background-color: #dd2525;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  
+}
+.sign-out button:hover {
+  background-color: #530606;
+  transition: 0.3s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.box {
+  font-size: 25px;
+  font-weight: bold;
+  background-color: #bae2f0;
+  padding: 10px 15px;
+  border-radius: 20px;
+  position: relative;
+  animation: moveBox 2s infinite;
+}
+.sign-btn {
+  background-color: rgb(52, 50, 50);
+  color: #bae2f0;
+  padding: 20px 25px;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+  margin-top: 50px;
+
+
+
+}
+.sign-btn:hover {
+  background-color: rgb(0, 0, 0);
+  transition: 0.3s;
+  transform: scale(1.2);
+  
+}
+
+@keyframes moveBox {
+  0% {
+    top: 0;
+    left: 0;
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    top: -20px;
+    left: 00px;
+  }
+  100% {
+    top: 0;
+    left: 0;
   }
 }
